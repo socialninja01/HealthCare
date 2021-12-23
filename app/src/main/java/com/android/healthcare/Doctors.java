@@ -10,12 +10,11 @@ import com.android.healthcare.Adapter.Adapter;
 
 import java.util.ArrayList;
 
-public class Medicals extends AppCompatActivity {
+public class Doctors extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.medicals_screen);
-
+        setContentView(R.layout.doctors_screen);
     }
 }

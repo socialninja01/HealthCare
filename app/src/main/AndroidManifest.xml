@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCare">
 <!--        <activity-->
-<!--            android:name=".EmergencyContact"-->
+<!--            android:name=".Doctors"-->
 <!--            android:exported="false" />-->
+        <!-- <activity -->
+        <!-- android:name=".EmergencyContact" -->
+        <!-- android:exported="false" /> -->
         <!-- <activity -->
         <!-- android:name=".BloodDonors" -->
         <!-- android:exported="false" /> -->
@@ -22,7 +25,7 @@
             android:name=".BloodBanks"
             android:exported="false" />
         <activity
-            android:name=".EmergencyContact"
+            android:name=".Doctors"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

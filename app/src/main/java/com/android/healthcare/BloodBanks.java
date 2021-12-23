@@ -12,32 +12,10 @@ import java.util.ArrayList;
 
 public class BloodBanks extends AppCompatActivity {
 
-    ArrayList<Integer> test;
-    private RecyclerView recyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bloodbanks_screen);
-
-        recyclerView=findViewById(R.id.bloodBanksRecyclerView);
-        test=new ArrayList<>(14);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-        test.add(0);
-
-
-        Adapter adapter=new Adapter(test);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
 
     }
 }

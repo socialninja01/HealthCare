@@ -11,22 +11,12 @@ import com.android.healthcare.Adapter.Adapter;
 import java.util.ArrayList;
 
 public class Hospitals extends AppCompatActivity {
-    private ArrayList<Integer> test;
-    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hospitals_screen);
 
-        recyclerView=findViewById(R.id.hospitalRecyclerView);
-        test=new ArrayList<>(14);
-
-
-        Adapter adapter=new Adapter(test);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
 
     }
 }
