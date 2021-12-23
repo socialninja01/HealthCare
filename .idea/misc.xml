@@ -10,7 +10,11 @@
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/font/poppins.xml" value="0.28020833333333334" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/bloodbanks_screen.xml" value="0.24818840579710144" />
-        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospital_item.xml" value="0.5040518638573744" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/blooddonors_screen.xml" value="0.23233695652173914" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/donor_item.xml" value="0.4" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/emergency_item.xml" value="0.23233695652173914" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/emergencycontact_screen.xml" value="0.23233695652173914" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospital_item.xml" value="0.4" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospitals_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/medicals_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/otp_screen.xml" value="0.25" />
