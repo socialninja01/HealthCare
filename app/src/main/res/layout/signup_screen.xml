@@ -59,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:padding="10dp"
+                android:fontFamily="@font/poppinsregular"
                 android:paddingStart="70dp"
                 android:paddingEnd="70dp"
                 android:text="Enter your mobile number and we will send you the otp to verify"
@@ -91,6 +92,7 @@
                             android:layout_margin="20dp"
                             android:layout_marginStart="0dp"
                             android:padding="10dp"
+                            android:fontFamily="@font/poppinsbold"
                             android:text="+92"
                             android:textColor="@color/black"
                             android:textSize="20sp"
@@ -104,6 +106,7 @@
                             android:layout_marginStart="10dp"
                             android:padding="10dp"
                             android:text="9456871230"
+                            android:fontFamily="@font/poppinsbold"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -120,6 +123,7 @@
                         android:backgroundTint="@color/primary_red"
                         android:paddingStart="50dp"
                         android:paddingEnd="50dp"
+                        android:fontFamily="@font/poppinsregular"
                         android:text="SUBMIT"
                         android:textStyle="bold" />
 
@@ -140,6 +144,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/poppinsregular"
             />
 
     </RelativeLayout>
