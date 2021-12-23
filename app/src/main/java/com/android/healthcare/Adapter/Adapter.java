@@ -11,23 +11,23 @@ import com.android.healthcare.R;
 
 import java.util.ArrayList;
 
-public class HospitalsAdapter extends RecyclerView.Adapter<HospitalsAdapter.ViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private ArrayList<Integer> test;
 
-    public HospitalsAdapter(ArrayList<Integer> test){
+    public Adapter(ArrayList<Integer> test){
         this.test=test;
     }
 
     @NonNull
     @Override
-    public HospitalsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.hospital_item,parent,false);
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HospitalsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
 
     }
 

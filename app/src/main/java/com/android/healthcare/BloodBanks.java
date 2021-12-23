@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.android.healthcare.Adapter.HospitalsAdapter;
+import com.android.healthcare.Adapter.Adapter;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,7 @@ public class BloodBanks extends AppCompatActivity {
         test.add(0);
 
 
-        HospitalsAdapter adapter=new HospitalsAdapter(test);
+        Adapter adapter=new Adapter(test);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

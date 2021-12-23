@@ -1,14 +1,8 @@
 package com.android.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-
-import com.android.healthcare.Adapter.HospitalsAdapter;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
