@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f3f3f3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-12dp"
+        android:id="@+id/bar"
+        android:background="@drawable/roundedcorner">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Chhattisgarh Health +"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notibell"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="25dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/slide" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/Doctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/homeDoctor" />
+
+                    <ImageView
+                        android:id="@+id/Medicines"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/medicine" />
+
+                    <ImageView
+                        android:id="@+id/Diagnostics"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/digonostic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/BloodDonor"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/blood" />
+
+                    <ImageView
+                        android:id="@+id/Hospitals"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/hospitals" />
+
+                    <ImageView
+                        android:id="@+id/BloodBanks"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/bloodbank" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/MedicalService"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/medical_service" />
+
+                    <ImageView
+                        android:id="@+id/EmergencyContacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/pill" />
+
+                    <ImageView
+                        android:id="@+id/DoctorsContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/microscope" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
