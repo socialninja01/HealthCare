@@ -22,7 +22,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @NonNull
     @Override
     public Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.doctor_item,parent,false);
+        View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_doctor_item,parent,false);
         return new ViewHolder(itemView);
     }
 

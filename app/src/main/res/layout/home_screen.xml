@@ -88,7 +88,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:layout_weight="1"
-                        android:src="@drawable/homeDoctor" />
+                        android:src="@drawable/home_doctor" />
 
                     <ImageView
                         android:id="@+id/Medicines"
@@ -161,6 +161,84 @@
                         android:src="@drawable/microscope" />
                 </LinearLayout>
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="-10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctors nearby you"
+                    android:textColor="#0000ff"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppinsbold"/>
+
+                <TextView
+                    android:id="@+id/see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="See all"
+                    android:textColor="@color/primary_red" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="25dp"
+                android:id="@+id/menu_doc_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="-10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctors nearby you"
+                    android:textColor="#0000ff"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppinsbold"/>
+
+                <TextView
+                    android:id="@+id/see_all2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="See all"
+                    android:textColor="@color/primary_red" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="25dp"
+                android:id="@+id/menu_hospital_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"/>
+
 
         </LinearLayout>
 
