@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f3f3f3">
+
+    <RelativeLayout
+        android:id="@+id/relaivelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/hospitalImage"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/hospital_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:weightSum="7"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:src="@drawable/back"/>
+            <TextView
+                android:id="@+id/hospitalName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Govt Hospital"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="20dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/hospitalLocation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raipur"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                />
+
+
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relaivelayout"
+        android:layout_marginTop="-55dp"
+        android:alpha="1"
+        android:scrollbars="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:alpha="1"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/hospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Govt Hospital"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/locationred" />
+
+                <TextView
+                    android:id="@+id/hospitalLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Raipur"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/openStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="CLOSED TODAY"
+                    android:textColor="@color/primary_red"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/hospitalTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="9:30AM - 08:00PM"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/allTiming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="All Timing"
+                    android:textColor="@color/primary_red"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/locationblue"/>
+                <TextView
+                    android:id="@+id/hospitalAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"
+                    android:text="Mahadev Ghat Road, Raipur, Chhattisgarh 492009"
+                    android:layout_marginStart="3dp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                app:cardCornerRadius="20dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/doctor_rv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SERVICES"
+                android:fontFamily="@font/poppinsregular"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/services_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ALL SERVIVES"
+                android:textColor="@color/primary_red"
+                android:fontFamily="@font/poppinsbold"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+
+
+</RelativeLayout>

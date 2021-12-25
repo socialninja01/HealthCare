@@ -20,6 +20,8 @@
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/emergency_item.xml" value="0.23233695652173914" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/emergencycontact_screen.xml" value="0.23233695652173914" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/home_screen.xml" value="0.176" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospital_detail_doctor_item.xml" value="0.49236641221374045" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospital_details_screen.xml" value="0.3573407202216066" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospital_item.xml" value="0.4" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/hospitals_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/medicals_screen.xml" value="0.24818840579710144" />
@@ -28,6 +30,7 @@
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/otp_screen.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/profile_screen.xml" value="0.21784420289855072" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/recycler_view_item.xml" value="0.40025740025740025" />
+        <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/service_item.xml" value="0.2128623188405797" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/signup_screen.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/splash_screen.xml" value="0.17300724637681159" />
         <entry key="..\:/AndroidProjects/HealthCare/app/src/main/res/layout/text_box.xml" value="0.21784420289855072" />
