@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f3f3f3">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="-15dp"
+        android:src="@drawable/roundedcorner"/>
+
+
+    <ScrollView
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:scrollbars="vertical">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+
+                    <ImageView
+                        android:id="@+id/doc_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/def_doc"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/doctor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Dr. Karan Nagwanshi"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/doctor_qualifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="B.Sc, MBBS, DDVL, MD- Dermitologist" />
+
+                    <TextView
+                        android:id="@+id/doctor_experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="16 yrs. Experience" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/pic1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic1" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/pic2"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic1" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="15dp">
+
+                            <ImageView
+                                android:id="@+id/pic3"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic1" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="15dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/pic4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.5"
+                                    android:src="@drawable/pic1" />
+
+                                <TextView
+                                    android:id="@+id/count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="+7"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card1"
+                android:layout_marginTop="35dp"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/openStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="CLOSED TODAY"
+                        android:textColor="@color/primary_red"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/hospitalTiming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10dp"
+
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="9:30AM - 08:00PM"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/allTiming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="All Timing"
+                        android:textColor="@color/primary_red"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/locationblue"/>
+                    <TextView
+                        android:id="@+id/hospitalAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"
+                        android:text="Mahadev Ghat Road, Raipur, Chhattisgarh 492009"
+                        android:layout_marginStart="3dp"/>
+
+                </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:cardCornerRadius="20dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/map"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FEEDBACK"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/feedback"
+                        android:text="Very good . courteous and efficient staff."
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/feedback_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jittu Raut"
+                            android:fontFamily="@font/poppinsregular"
+                            />
+                        <TextView
+                            android:id="@+id/feedback_time"
+                            android:layout_toRightOf="@id/feedback_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="2 years ago"
+                            android:fontFamily="@font/poppinsregular"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="ALL FEEDBACK"
+                        android:textColor="@color/primary_red"
+                        android:fontFamily="@font/poppinsbold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="SERVICES"
+                        android:fontFamily="@font/poppinsregular"/>
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ophthalmology"
+                        android:fontFamily="@font/poppinsregular"/>
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ophthalmology"
+                        android:fontFamily="@font/poppinsregular"/>
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ophthalmology"
+                        android:fontFamily="@font/poppinsregular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="ALL SERVICES"
+                        android:textColor="@color/primary_red"
+                        android:fontFamily="@font/poppinsbold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="SPECIALIZATION"
+                        android:fontFamily="@font/poppinsregular"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/specialization_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gdot"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/gdot"/>
+                        <TextView
+                            android:layout_toRightOf="@id/gdot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VERIFICATION DONE FOR"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-Medical Lincense"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="2dp"/>
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
