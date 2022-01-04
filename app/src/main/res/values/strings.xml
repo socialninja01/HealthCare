@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">HealthCare</string>
+    <string name="about_us">    Chhattisgarh Health+ act as an important role in saving life of human beings.\n\t
+     This app is developed by Social Ninja with only purpose of social welfare. Social Ninja is not going to generate revenue from this app.\n\t
+     Chhattisgarh Health+ have variety of features :-\n
+          \t* User can register in app\n
+          \t* user can request for blood\n
+          \t* user can donate blood\n
+          \t* user can view the blood compatibility\n
+          \t* user can also take a look over the nearest hospital\n\n
+
+      \tThe app is developed by Social Ninja so that users can view the information about registered blood donors such as name, address, and other such personal information along with their details of blood group and other medical information of donor. The project also has a login page where in the user is required to register and only then can view the availability of blood and may also register to donate blood if he/she wishes to. This app requires internet access and thus there is a disadvantage of internet failure. Thus this application helps to select the right donor online instantly using medical details along with the blood group.
+      \n\tThe main aim of developing this application by Social Ninja is to reduce the time to a great extent that is spent in searching for the right donor and the availability of blood required. This application provides the required information in no time and also helps in quicker decision making
+</string>
 </resources>
