@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.terms_conditions_screen);
+        setContentView(R.layout.contact_us_screen);
 
     }
 }
