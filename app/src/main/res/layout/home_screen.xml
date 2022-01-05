@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#f3f3f3">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:background="#f3f3f3"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu_home"
+        android:layout_gravity="start"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,6 +31,7 @@
         android:background="@drawable/roundedcorner">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
@@ -244,7 +263,8 @@
 
 
     </ScrollView>
+    </RelativeLayout>
 
 
 
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
