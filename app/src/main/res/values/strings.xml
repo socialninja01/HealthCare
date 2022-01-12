@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">HealthCare</string>
+    <string name="enter_number">Enter your mobile number and we will send you the otp to verify</string>
     <string name="about_us">    Chhattisgarh Health+ act as an important role in saving life of human beings.\n\t
      This app is developed by Social Ninja with only purpose of social welfare. Social Ninja is not going to generate revenue from this app.\n\t
      Chhattisgarh Health+ have variety of features :-\n
