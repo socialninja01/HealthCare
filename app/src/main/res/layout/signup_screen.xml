@@ -41,28 +41,28 @@
     <ImageView
         android:id="@+id/image3"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@id/guide"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@id/image4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
         app:srcCompat="@drawable/logo2" />
-
 
     <ImageView
         android:id="@+id/image4"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
         android:src="@drawable/cghealth"
+        app:layout_constraintBottom_toTopOf="@id/image5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image3" />
+        app:layout_constraintTop_toBottomOf="@id/image3"
+        />
 
     <ImageView
         android:id="@+id/image5"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/verification"
         app:layout_constraintBottom_toTopOf="@id/guide"
@@ -76,8 +76,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsregular"
         android:padding="10dp"
-        android:paddingStart="70dp"
-        android:paddingEnd="70dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/enter_number"
         android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/image5" />
@@ -85,58 +85,62 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
         android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/white"
         app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text2"
         app:layout_constraintTop_toBottomOf="@id/text1">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/counrtyCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginStart="88dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/poppinsbold"
                 android:padding="10dp"
                 android:text="+92"
                 android:textColor="@color/black"
-                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.165"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                />
 
             <EditText
                 android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginStart="72dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppinsbold"
                 android:padding="10dp"
                 android:text="9456871230"
                 android:textColor="@color/black"
-                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@id/counrtyCode"
-                app:layout_constraintTop_toTopOf="parent" />
+                />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/submitBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/roundedcorner"
                 android:backgroundTint="@color/primary_red"
                 android:fontFamily="@font/poppinsregular"
@@ -144,12 +148,8 @@
                 android:paddingEnd="50dp"
                 android:text="SUBMIT"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/counrtyCode" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+                />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -158,8 +158,6 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/poppinsregular"
         android:text="By continuing, you agree to terms and conditions"

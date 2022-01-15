@@ -11,7 +11,7 @@
           \t* user can also take a look over the nearest hospital\n\n
 
       \tThe app is developed by Social Ninja so that users can view the information about registered blood donors such as name, address, and other such personal information along with their details of blood group and other medical information of donor. The project also has a login page where in the user is required to register and only then can view the availability of blood and may also register to donate blood if he/she wishes to. This app requires internet access and thus there is a disadvantage of internet failure. Thus this application helps to select the right donor online instantly using medical details along with the blood group.
-      \n\tThe main aim of developing this application by Social Ninja is to reduce the time to a great extent that is spent in searching for the right donor and the availability of blood required. This application provides the required information in no time and also helps in quicker decision making
+      \n\tThe main aim of developing this application by Social Ninja is to reduce the time to a great extent that is spent in searching for the right donor and the availability of blood required. This application provides the required information in no time and also helps in quicker decision making.
 </string>
 
     <string name="tc">\t\tBy downloading or using the app, these terms will automatically apply to you - you should make sure therefore that you read them carefully before using the app.You are not allowed to copy or modify the app, any part of the app, or our trademarks in any way.

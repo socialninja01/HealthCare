@@ -58,6 +58,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,10 +75,8 @@
         android:layout_marginTop="25dp"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar" />
+         />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
