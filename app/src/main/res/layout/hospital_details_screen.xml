@@ -1,83 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f3f3f3">
 
-    <RelativeLayout
-        android:id="@+id/relaivelayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/hospitalImage"
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/hospital_image" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            android:gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:weightSum="7"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:src="@drawable/back"/>
-            <TextView
-                android:id="@+id/hospitalName1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:text="Govt Hospital"
-                android:fontFamily="@font/poppinsbold"
-                android:textSize="20dp"
-                android:layout_marginStart="15dp"
-                android:textColor="@color/white"/>
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/hospitalLocation1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Raipur"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                />
-
-
-
-        </LinearLayout>
-        
-    </RelativeLayout>
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/relaivelayout"
-        android:layout_marginTop="-55dp"
-        android:alpha="1"
-        android:scrollbars="vertical">
-
-    <androidx.cardview.widget.CardView
+    <ImageView
+        android:id="@+id/hospitalImage"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:alpha="1"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="35dp"
-        app:cardCornerRadius="20dp">
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/hospital_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hospitalName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Govt Hospital"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/hospitalLocation1"
+        app:layout_constraintStart_toEndOf="@id/image1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/hospitalLocation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Raipur"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hospitalName1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:layout_height="500dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="35dp"
+            android:alpha="1"
+            app:cardCornerRadius="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
 
             <TextView
                 android:id="@+id/hospitalName"
@@ -86,131 +83,187 @@
                 android:fontFamily="@font/poppinsbold"
                 android:text="Govt Hospital"
                 android:textColor="@color/black"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
-            <LinearLayout
+
+            <ImageView
+                android:id="@+id/image2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/locationred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/hospitalLocation"
+                app:layout_constraintBottom_toBottomOf="@id/hospitalLocation"
+                />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="2dp"
-                    android:src="@drawable/locationred" />
-
-                <TextView
-                    android:id="@+id/hospitalLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="Raipur"
-                    android:textSize="12dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:weightSum="3">
-
-                <TextView
-                    android:id="@+id/openStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="10dp"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="CLOSED TODAY"
-                    android:textColor="@color/primary_red"
-                    android:textAlignment="center"/>
-                <TextView
-                    android:id="@+id/hospitalTiming"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="10dp"
-
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="9:30AM - 08:00PM"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"/>
-                <TextView
-                    android:id="@+id/allTiming"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="10dp"
-
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="All Timing"
-                    android:textColor="@color/primary_red"
-                    android:textAlignment="center"/>
-            </LinearLayout>
-            <LinearLayout
+            <TextView
+                android:id="@+id/hospitalLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/locationblue"/>
-                <TextView
-                    android:id="@+id/hospitalAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsregular"
-                    android:textSize="12dp"
-                    android:text="Mahadev Ghat Road, Raipur, Chhattisgarh 492009"
-                    android:layout_marginStart="3dp"/>
+                android:fontFamily="@font/poppinsregular"
+                android:text="Raipur"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/image2"
+                app:layout_constraintTop_toBottomOf="@id/hospitalName"
+                android:layout_marginTop="5dp"
+                />
 
-            </LinearLayout>
+
+            <TextView
+                android:id="@+id/openStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="CLOSED TODAY"
+                android:textAlignment="center"
+                android:textColor="@color/primary_red"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hospitalLocation"
+                app:layout_constraintEnd_toStartOf="@id/hospitalTiming"/>
+
+            <TextView
+                android:id="@+id/hospitalTiming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="9:30AM - 08:00PM"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@id/openStatus"
+                app:layout_constraintTop_toBottomOf="@id/hospitalLocation"
+                app:layout_constraintEnd_toStartOf="@id/allTiming"/>
+
+            <TextView
+                android:id="@+id/allTiming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="All Timing"
+                android:textAlignment="center"
+                android:textColor="@color/primary_red"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@id/hospitalTiming"
+                app:layout_constraintTop_toBottomOf="@id/hospitalLocation"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/locationblue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/openStatus"
+                app:layout_constraintEnd_toStartOf="@id/hospitalAddress"
+                app:layout_constraintTop_toTopOf="@id/hospitalAddress"
+                app:layout_constraintBottom_toBottomOf="@id/hospitalAddress"
+                />
+
+            <TextView
+                android:id="@+id/hospitalAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Mahadev Ghat Road, Raipur, Chhattisgarh 492009"
+                android:textSize="12dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toEndOf="@id/image3"
+                app:layout_constraintTop_toBottomOf="@id/openStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                app:layout_constraintTop_toBottomOf="@id/hospitalAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <com.google.android.gms.maps.MapView
                     android:id="@+id/map"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
             </androidx.cardview.widget.CardView>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="15dp"
+                android:id="@+id/doctor_rv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/doctor_rv"/>
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="SERVICES"
-                android:fontFamily="@font/poppinsregular"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/services_rv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/card1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="SERVICES"
+                    app:layout_constraintTop_toBottomOf="@id/doctor_rv"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Ophthalmology"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/text1"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Ophthalmology"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/text2"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Ophthalmology"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/text3"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppinsbold"
                 android:text="ALL SERVIVES"
                 android:textColor="@color/primary_red"
-                android:fontFamily="@font/poppinsbold"/>
-        </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@id/text4"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
