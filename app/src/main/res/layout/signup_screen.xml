@@ -140,7 +140,6 @@
                 android:id="@+id/submitBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:background="@drawable/roundedcorner"
                 android:backgroundTint="@color/primary_red"
                 android:fontFamily="@font/poppinsregular"
