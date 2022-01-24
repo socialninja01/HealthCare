@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="124dp"
-    android:layout_margin="15dp"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
     android:background="#f3f3f3"
-    android:layout_height="147dp">
+    android:layout_margin="10dp">
 
-    <RelativeLayout
-        android:id="@+id/rl1"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:elevation="9dp"
         android:layout_width="match_parent"
-        android:layout_height="30dp"></RelativeLayout>
-    <RelativeLayout
-        android:layout_below="@+id/rl1"
-        android:layout_width="match_parent"
-        android:layout_height="117dp">
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp">
 
-        <androidx.cardview.widget.CardView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="15dp">
+            android:layout_height="wrap_content">
 
 
             <TextView
@@ -27,38 +28,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="@font/poppinsbold"
                 android:text="Dr. Karan"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/docQualifications"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/docQualifications"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="65dp"
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/poppinsregular"
                 android:text="B.Sc, MBBS, DDVL,MD-Dermitologist"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:backgroundTint="#f3f3f3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card1"
+        app:layout_constraintBottom_toTopOf="@id/card1">
 
     <ImageView
         android:id="@+id/docImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/def_doc" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/def_doc"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="219dp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
 
-</RelativeLayout>
