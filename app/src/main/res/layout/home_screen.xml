@@ -8,263 +8,274 @@
     android:id="@+id/drawer"
     android:background="#f3f3f3"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    >
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/menu_home"
-        android:layout_gravity="start"
-        />
+    tools:openDrawer="start">
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/menu_home"
+            android:layout_gravity="start"
+            />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
-        android:id="@+id/bar"
-        android:background="@drawable/roundedcorner">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginTop="-12dp"
+            android:id="@+id/bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/roundedcorner">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="25dp"
-                    />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Chhattisgarh Health +"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="Chhattisgarh Health +"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/image1"
+                        app:layout_constraintEnd_toStartOf="@id/image2"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/notibell"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="25dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/image3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/notibell"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="25dp"
-                    />
+                    android:layout_gravity="center"
+                    android:src="@drawable/slide"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-            </RelativeLayout>
 
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bar">
+                <ImageView
+                    android:id="@+id/Doctor"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/home_doctor"
+                    app:layout_constraintTop_toBottomOf="@id/image3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/Medicines"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/Medicines"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/medicine"
+                    app:layout_constraintStart_toEndOf="@id/Doctor"
+                    app:layout_constraintTop_toBottomOf="@id/image3"
+                    app:layout_constraintEnd_toStartOf="@id/Diagnostics"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/slide" />
+                <ImageView
+                    android:id="@+id/Diagnostics"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/digonostic"
+                    app:layout_constraintStart_toEndOf="@id/Medicines"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image3"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                <ImageView
+                    android:id="@+id/BloodDonor"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/blood"
+                    app:layout_constraintTop_toBottomOf="@id/Diagnostics"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/Hospitals"/>
 
-                    <ImageView
-                        android:id="@+id/Doctor"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/home_doctor" />
+                <ImageView
+                    android:id="@+id/Hospitals"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    app:layout_constraintTop_toBottomOf="@id/Diagnostics"
+                    app:layout_constraintStart_toEndOf="@id/BloodDonor"
+                    app:layout_constraintEnd_toStartOf="@id/BloodBanks"
+                    android:src="@drawable/hospitals" />
 
-                    <ImageView
-                        android:id="@+id/Medicines"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/medicine" />
+                <ImageView
+                    android:id="@+id/BloodBanks"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/bloodbank"
+                    app:layout_constraintTop_toBottomOf="@id/Diagnostics"
+                    app:layout_constraintStart_toEndOf="@id/Hospitals"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <ImageView
-                        android:id="@+id/Diagnostics"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/digonostic" />
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/MedicalService"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BloodBanks"
+                    app:layout_constraintEnd_toStartOf="@id/EmergencyContacts"
+                    android:src="@drawable/medical_service" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                <ImageView
+                    android:id="@+id/EmergencyContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/pill"
+                    app:layout_constraintStart_toEndOf="@id/MedicalService"
+                    app:layout_constraintEnd_toStartOf="@id/DoctorsContact"
+                    app:layout_constraintTop_toBottomOf="@id/BloodBanks"/>
 
-                    <ImageView
-                        android:id="@+id/BloodDonor"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/blood" />
+                <ImageView
+                    android:id="@+id/DoctorsContact"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/microscope"
+                    app:layout_constraintTop_toBottomOf="@id/BloodBanks"
+                    app:layout_constraintStart_toEndOf="@id/EmergencyContacts"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <ImageView
-                        android:id="@+id/Hospitals"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/hospitals" />
-
-                    <ImageView
-                        android:id="@+id/BloodBanks"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/bloodbank" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <ImageView
-                        android:id="@+id/MedicalService"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/medical_service" />
-
-                    <ImageView
-                        android:id="@+id/EmergencyContacts"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/pill" />
-
-                    <ImageView
-                        android:id="@+id/DoctorsContact"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/microscope" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="-10dp"
-                >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/text1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Doctors nearby you"
                     android:textColor="#0000ff"
                     android:layout_alignParentStart="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
-                    android:fontFamily="@font/poppinsbold"/>
+                    android:fontFamily="@font/poppinsbold"
+                    app:layout_constraintTop_toBottomOf="@id/DoctorsContact"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/see_all"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/poppinsbold"
                     android:text="See all"
-                    android:textColor="@color/primary_red" />
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/primary_red"
+                    app:layout_constraintStart_toEndOf="@id/text1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/DoctorsContact"/>
 
 
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_margin="25dp"
-                android:id="@+id/menu_doc_rv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scrollbars="horizontal"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="-10dp"
-                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="25dp"
+                    android:id="@+id/menu_doc_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/text1"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@id/text2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Hospitals nearby you"
                     android:textColor="#0000ff"
                     android:layout_alignParentStart="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
-                    android:fontFamily="@font/poppinsbold"/>
+                    android:fontFamily="@font/poppinsbold"
+                    app:layout_constraintTop_toBottomOf="@id/menu_doc_rv"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/see_all2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/poppinsbold"
                     android:text="See all"
-                    android:textColor="@color/primary_red" />
+                    android:textColor="@color/primary_red"
+                    android:textAlignment="viewEnd"
+                    app:layout_constraintStart_toEndOf="@id/text2"
+                    app:layout_constraintTop_toBottomOf="@id/menu_doc_rv"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
 
-            </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="25dp"
+                    android:id="@+id/menu_hospital_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/text2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_margin="25dp"
-                android:id="@+id/menu_hospital_rv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scrollbars="horizontal"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </LinearLayout>
-
-
-    </ScrollView>
-    </RelativeLayout>
-
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
